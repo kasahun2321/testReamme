@@ -4,8 +4,9 @@
 
 1. first of all the index.html file executed and loaded into the browser and the app-root component is rendered into the browser the app-root is a component but we are loading only the name of the selector of the component
 2. the JS bundle is loading becouse Angular is a single page application first it reads the angular.json file then learn about the project configuration then based on the config it build the entire appliccation underneath angular CLI use webpack to bundel the javascript module ,when angular appliation ins build using `ng build --prod` there are same file are genearted to the folder to 'dist /appname'
-   3.the main entry point start executing :this file is a containor for all Angular application by default the exectuion is configured under the angular.json file it is main.js so every time the bootsrap proces is started from main of the config  
-   4 finaly ones we create ower own component we can import it to the app.module and create the tage into the template of the module and declare the selectoer name into @NgModule of the App module then it will render .
+3. the main entry point start executing :this file is a containor for all Angular application by default the exectuion is configured under the angular.json file it is main.js so every time the bootsrap proces is started from main of the config  
+   
+4. finaly ones we create ower own component we can import it to the app.module and create the tage into the template of the module and declare the selectoer name into @NgModule of the App module then it will render .
 
 ## Expain all the meta-data passed to @NgModule factory decorator? Use the official Angular docs.
 
