@@ -89,6 +89,13 @@ jit?: true
 
 # Explain how the default Emulated style encapsulation of Angular works?
 Emulated view encapsulation (the default) emulates the behavior of shadow DOM by preprocessing (and renaming) the CSS code to effectively scope the CSS to the component's view
+#### the emulated style of encapsulation is the concept of the compiler generate unique object attribute for each element to protect css leak betwen element tag
+* There are two kinds of generated attributes:
+1. An element that would be a shadow DOM host in native encapsulation has a generated _nghost attribute. 
+This is typically the case for component host elements.
+2. An element within a component's view has a _ngcontent attribute that identifies to which host's emulated shadow DOM this element belongs.
+ 
+The exact values of these attributes aren't important. They are automatically generated and you should never refer to them in application code. But they are targeted by the generated component styles, which are in the <head> section of the DOM:
 
 # Do your research on custom Web Components? What are they? and explain how the shadow DOM is important for creating custom Web Components.
 
